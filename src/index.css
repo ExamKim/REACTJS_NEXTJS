@@ -1,0 +1,41 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body[data-theme='light'] {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --subtle: #4b5563;
+  --border: #dbe3ee;
+  --accent: #0f766e;
+  --button-text: #ffffff;
+  background: radial-gradient(circle at top right, #dff6f3 0%, #f5f7fb 55%);
+  color: var(--text);
+}
+
+body[data-theme='dark'] {
+  --bg: #0f172a;
+  --card: #162136;
+  --text: #e2e8f0;
+  --subtle: #94a3b8;
+  --border: #334155;
+  --accent: #2dd4bf;
+  --button-text: #062521;
+  background: radial-gradient(circle at top right, #173f54 0%, #0f172a 55%);
+  color: var(--text);
+}
+
+#root {
+  min-height: 100vh;
+}
