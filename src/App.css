@@ -34,6 +34,10 @@ h2 {
   padding: 16px;
 }
 
+.card-wide {
+  grid-column: 1 / -1;
+}
+
 .row {
   display: flex;
   align-items: center;
@@ -98,6 +102,86 @@ button:hover {
   padding: 8px;
 }
 
+.mini-app {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mini-block {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--card) 90%, var(--accent) 10%);
+}
+
+.mini-block h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.auth-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+}
+
+.error-text {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.product-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.product-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  background: var(--card);
+}
+
+.product-title {
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.simple-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.toast-viewport {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 999;
+  display: grid;
+  gap: 8px;
+}
+
+.toast {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.toast-success {
+  border-color: #16a34a;
+}
+
+.toast-error {
+  border-color: #dc2626;
+}
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
@@ -106,5 +190,17 @@ button:hover {
   .app-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .mini-app {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-form {
+    grid-template-columns: 1fr;
   }
 }

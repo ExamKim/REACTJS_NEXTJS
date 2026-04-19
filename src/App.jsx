@@ -9,6 +9,7 @@ import AuthPanel from './components/AuthPanel'
 import UserBadge from './components/UserBadge'
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
+import MiniApp from './components/miniapp/MiniApp'
 
 function App() {
   const theme = useRecoilValue(themeAtom)
@@ -47,6 +48,8 @@ function App() {
           <TodoInput />
           <TodoList />
         </section>
+
+        <MiniApp />
       </div>
     </div>
   )
