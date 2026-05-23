@@ -29,9 +29,9 @@ export function CartProvider({ children }) {
     )
 }
 
-export const useCart = () => useContext(CartContext)
 
 export default function CartComponent() {
+    const useCart = () => useContext(CartContext)
     const { cart, removeFromCart, totalPrice } = useCart()
 
     return (
